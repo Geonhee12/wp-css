@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .image-container {
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            height: 230px;
+        }
+
+        .text-center {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .flex-box {
+            display: flex;
+            height: 250px;
+            background-color: white;
+        }
+
+        .flex-item {
+            margin: 10px;
+            background-color: white;
+        }
+
+        .item1 {
+            flex-grow: 1;
+        }
+
+        .item2 {
+            flex-grow: 2;
+        }
+
+        .item {
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: white;
+
+        }
+
+        .left-float {
+            float: left;
+        }
+    </style>
+    <style>
+        .container {
+            display: grid;
+            margin-bottom: 30px;
+            grid-template-rows: repeat(2, 100px);
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 15px;
+            grid-template-areas:
+                "header1 header1 header1"
+                "section section aside"
+            ;
+        }
+
+        .container2 {
+            display: grid;
+            column-gap: 15px;
+            grid-template: repeat(1, 100px) / repeat(3, 1fr);
+        }
+
+        .container2 .rem {
+            font-size: 22px;
+        }
+
+        .special {
+            grid-column: span 2;
+        }
+        
+        header1 {
+            grid-area: header1;
+            background-color: white;
+        }
+
+        section {
+            grid-area: section;
+            background-color: white;
+            font-size: 15px;
+        }
+
+        .container .rem {
+            font-size: 22px;
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: white;
+        }
+
+    </style>
+
+    <style>
+        #main_header {
+            width: 1400px;
+            margin: 0 auto;
+            height: 160px;
+            position: relative;
+        }
+
+        #main_header>#title {
+            position: absolute;
+            left: 20px;
+            top: 30px;
+            color: red;
+        }
+
+        #main_header>#main_gnb {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        #main_header>#main_lnb {
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+        }
+
+        #main_gnb>ul {
+            list-style: none;
+        }
+
+        #main_gnb>ul>li {
+            float: left;
+        }
+
+        #main_gnb>ul>li>a {
+            display: block;
+            padding: 2px 10px;
+            border: 1px solid black;
+        }
+
+        #main_gnb>ul>li>a:hover {
+            background: black;
+            color: white;
+        }
+
+        #main_gnb>ul>li:first-child>a {
+            border-radius: 10px 0 0 10px;
+        }
+
+        #main_gnb>ul>li:last-child>a {
+            border-radius: 0 10px 10px 0;
+        }
+    </style>
+    <style>
+        #main_lnb>ul {
+            list-style: none;
+        }
+
+        #main_lnb>ul>li {
+            float: left;
+        }
+
+        #main_lnb>ul>li>a {
+            display: block;
+            padding: 10px 20px;
+            border: 1px solid black;
+        }
+
+        #main_lnb>ul>li>a:hover {
+            background: black;
+            color: white;
+        }
+
+        #main_lnb>ul>li:first-child>a {
+            border-radius: 10px 0 0 10px;
+        }
+
+        #main_lnb>ul>li:last-child>a {
+            border-radius: 0 10px 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="main_header">
+        <div id="title">
+            <h1>Liverpool</h1>
+            <h2>Football Club</h2>
+        </div>
+        <nav id="main_gnb">
+            <ul>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Squad</a></li>
+                <li><a href="#">Captain</a></li>
+            </ul>
+        </nav>
+        <nav id="main_lnb">
+            <ul>
+                <li><a href="#">Henderson</a></li>
+                <li><a href="#">Milner</a></li>
+                <li><a href="#">Origi</a></li>
+                <li><a href="#">Minamino</a></li>
+                <li><a href="#">Tiago</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="flex-box">
+        <div class="flex-item item1 image-container">
+            <img src="/image/PS20072300037.jpg">
+        </div>
+        <div class="flex-item item2 text-center">
+            <h2>You will never walk alone</h2>
+        </div>
+    </div>
+    <p>리버풀 축구 클럽(영어: Liverpool Football Club, 리버풀 축구단)은 잉글랜드 머지사이드주 리버풀을 연고로 하는 프리미어리그 축구 클럽이다. 리버풀은 현재 통산 19회의 1부리그 우승을
+        한 바 있으며, 8번의 리그 컵 우승, 7번의 FA컵우승, 그리고 6번의 UEFA 챔피언스리그 우승을 차지한 바 있는데 챔피언스리그 우승은 잉글랜드 내에서는 역대 최다 우승 기록으로 기록되어 있다.
+    </p>
+    <div class="item left-float">
+        <img src="/image/cccc.png">
+    </div>
+    <p>리버풀은 1892년에 창단되었으며, 그 후 비약적인 상승세를 보여 1900 ~ 1947년도까지 5번의 리그 우승을 거두기도 했었다. 하지만 1950년대에는 주로 2부리그에 머물러 있었고 1959년 빌
+        섕클리가 감독을 맡기 전까지 리버풀은 1부리그 승격을 하지 못했다. 섕클리가 감독을 맡은 지 두 시즌 만에 리버풀은 다시 1부리그로 승격하게 되었고 또다시 리버풀은 세 번의 리그 우승과 두 번의 FA컵
+        우승과 한 번의 UEFA컵 우승을 일궈내게 된다. 과거 30년전의 리버풀은 잉글랜드뿐만 아니라 유럽축구에서 최강의 클럽 중 하나로 군림하였으며 1977 ~ 1984년까지 8시즌 동안 무려 4번의
+        챔피언스리그 우승 이라는 결과를 만들어 내었다. 1990년대에 약간의 침체기가 있었지만 2001년 UEFA컵 우승을 하였으며, 2005년도에는 다섯 번째 챔피언스리그 우승을 차지해 잉글랜드 축구팀으로는
+        최초이자 유일한 빅이어 영구소장 팀이 되었다. 특히 1984년과 2001년도에는 세 개의 트로피를 차지한 팀에게 주어지는 트레블의 자격도 있었지만 우승한 대회의 기준에 부합하지 못하여 미니 트레블로
+        불린다.</p>
+
+    <div class="container">
+        <header1>리버풀의 홈 유니폼 색깔은 원래 레드 앤 화이트였으나 1960년대에는 올 레드로 바뀌었다. 리버풀의 엠블럼은 창단후 변화가 거의 없었지만 1989년 힐즈브러 참사를 기리기 위해 엠블럼의
+            좌우에 불꽃을 집어넣어 현재에 이르고 있다. 리버풀은 현재 54,074명을 수용하는 안필드를 홈 경기장으로 사용하고 있으며, 59,000석까지 증축 예정이다. 리버풀은 광대하고 다양한 팬층을
+            보유하고 있으며 오랜 전통을 가지고 있다. 몇몇 클럽 등과는 오랜 라이벌 관계를 유지해오고 있으며, 이중에 현재 리버풀의 가장 큰 라이벌이라 볼 수 있는 팀은 맨체스터 유나이티드(노스웨스트
+            더비)와 이른바 머지사이드 더비라고 불리는 에버턴이 있다.
+        </header1>
+
+        <section>
+            <div class="rem">역사<br></div>
+            <p>리버풀 축구 클럽의 역사는 1891년으로 거슬러 올라간다. 안필드 경기장의 임대인이었던, 존 호울딩 (John Houlding)은 1891년 안필드구장의 전지분을 매입하고서는 임대료를
+                연간 100파운드에서 250파운드로 인상시키려는 움직임을 보였다. 다음 해인 1892년, 안필드 경기장에는 존 호울딩에 의해 1892년 3월 15일, 새로운 축구 클럽이 리버풀 시에
+                탄생하게 되며 8년간 안필드 경기장을 임대해 쓰던 에버턴은 바로 구디슨 파크로 구장을 옮겼다. 그 때 새롭게 생겨난 축구팀이 리버풀 축구 클럽이다.</p>
+        </section>
+        <aside>
+            <div class="rem">유니폼과 엠블럼<br></div>
+            <p>리버풀의 홈 유니폼은 전통적으로 레드 앤 화이트였다. 1894 - 95시즌부터 리버풀은 빨간색을 택했고 1901년에는 리버풀 시의 상징인 리버 버드
+                모양을 엠블럼에 집어넣었다. 향후 60년간 리버풀의 홈 유니폼은 빨간색 상의에 흰색 하의였다.</p>
+        </aside>
+
+    </div>
+    <div class="container2">
+        <div>
+            <div class="rem">헨더슨</div>
+            <div><p>잉글랜드 국적의 리버풀 FC 소속 축구 선수로 스티븐 제라드의 뒤를 이어 리버풀의 주장을 맡고 있다. 포지션은 중앙 미드필더이다.</p></div>
+        </div>
+
+        <div class="special">
+            <div class="rem">제라드<br></div>
+            <p>잉글랜드의 축구선수 출신 감독이다. 선수 시절 포지션은 중앙 미드필더와 공격형 미드필더였다. 2018년부터 레인저스 FC 감독을 맡고 있다. 유스 팀부터 프로 생활까지 28년 동안 리버풀
+                FC에만 충성을 다한 리버풀의 레전드이자 2000년대 리버풀의 상징과도 같은 선수이다. 여러 주축 선수들을 내보내고 나서 맞이한 리버풀의 암흑기까지 함께 했던 선수이다. 커리어 동안
+                FIFA FIFPro 월드 XI 및 UEFA 올해의 팀에 총 3회 선정되었으며 절정기였던 2005년에는 UEFA 올해의 클럽 축구 선수상을 수상하고 발롱도르 3위에 오르는 등 눈부신 수상
+                이력을 가진 흘륭한 선수였다.</p>
+        </div>
+
+    </div>
+</body>
+
+</html>
